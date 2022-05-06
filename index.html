@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Charlia Smith, jazz pianist">
+		<meta name="keywords" content="charles, charlie, smith, jazz, piano, pianist, phoenix, arizona, az">
+		<meta name="author" content="Charlia Smith">
+		<meta name="theme-color" content="#ff6600">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#f2f2f2">
+		<link rel="shortcut icon" href="favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#f2f2f2">
+		<meta name="msapplication-config" content="favicon/browserconfig.xml">
+		<!-- <meta name="theme-color" content="#f2f2f2"> -->
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Orelega+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Title -->
+		<title>Charlie Smith</title>
+	</head>
+	<body>
+		<!-- Navbar-->
+		<div class="navbar unselectable">
+			<div class="navbar-button" onclick="openMenu();">≡</div>
+			<div class="navbar-logo">
+				<span class="navbar-logo-text">Charlie Smith</span>
+			</div>
+			<div class="navbar-link-container">
+				<div class="navbar-link navbar-link-active" onclick="transition(0)">Home</div>
+				<div class="navbar-link" onclick="transition(1)">About</div>
+				<div class="navbar-link" onclick="transition(2)">Contact</div>
+			</div>
+		</div>
+		<!-- Sidebar overlay -->
+		<div class="overlay" id="overlay" onclick="closeMenu();"></div>
+		<!-- Sidebar -->
+		<div class="sidebar unselectable" id="sidebar">
+			<div class="sidebar-link sidebar-link-mobile sidebar-link-active" onclick="closeMenu(); transition(0)">Home</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(1)">About</div>
+			<div class="sidebar-link sidebar-link-mobile" onclick="closeMenu(); transition(2)">Contact</div>
+		</div>
+		<h1>Charlie Smith</h1>
+		<!-- Home -->
+		<div class="page home-page page-active">
+			<div class="panel left-panel"></div>
+			<div class="panel right-panel">
+				<div class="keyboard">
+					<div class="key key-white"></div>
+					<div class="key key-white"></div>
+					<div class="key key-white"></div>
+					<div class="key key-white"></div>
+					<div class="key key-white"></div>
+					<div class="key key-white"></div>
+					<div class="key key-white"></div>
+					<div class="key key-black" style="margin-left: 7.14%"></div>
+					<div class="key key-black" style="margin-left: 21.43%"></div>
+					<div class="key key-black" style="margin-left: 50%"></div>
+					<div class="key key-black" style="margin-left: 64.29%"></div>
+					<div class="key key-black" style="margin-left: 78.57%"></div>
+				</div>
+				<div class="panel-padding">
+					<div class="name unselectable">
+						<div class="name-line">
+							<div class="letter" onclick="flip(this)">C</div>
+							<div class="letter" onclick="flip(this)">h</div>
+							<div class="letter" onclick="flip(this)">a</div>
+							<div class="letter" onclick="flip(this)">r</div>
+							<div class="letter" onclick="flip(this)">l</div>
+							<div class="letter" onclick="flip(this)">i</div>
+							<div class="letter" onclick="flip(this)">e</div>
+						</div>
+						<div class="name-line name-second-line">
+							<div class="letter" onclick="flip(this)">S</div>
+							<div class="letter" onclick="flip(this)">m</div>
+							<div class="letter" onclick="flip(this)">i</div>
+							<div class="letter" onclick="flip(this)">t</div>
+							<div class="letter" onclick="flip(this)">h</div>
+						</div>
+					</div>
+					<div id="name-subtitle">Jazz Pianist • Phoenix, AZ</div>
+				</div>
+			</div>
+		</div>
+		<!-- About -->
+		<div class="page">
+			<div class="page-content">
+				<div class="page-entry">
+					<img class="page-image" src="images/about.jpg">
+				</div>
+				<div class="page-entry ">
+					<div class="page-title">About Charlie</div>
+					<div class="page-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus porta, tellus ut elementum imperdiet, nulla lorem volutpat sem, 
+						vitae commodo odio libero non risus. Sed tortor justo, pellentesque id scelerisque ut, vulputate nec dui. Nam dictum nisl a quam 
+						faucibus pellentesque. Aliquam pulvinar, purus nec egestas mollis, tellus odio scelerisque sem, eget hendrerit leo nisi ac orci. 
+						Quisque vitae laoreet velit. In massa risus, faucibus et accumsan sit amet, aliquam vitae purus.
+						<br><br>
+						Sed efficitur lectus sed ante maximus, eu sollicitudin ex dapibus. Suspendisse nulla tellus, euismod eget tortor consequat, interdum 
+						suscipit leo. Suspendisse neque mauris, rhoncus eget magna vitae, lacinia vulputate mi. Vivamus fringilla, velit ac blandit faucibus,
+						dolor nisi feugiat orci, vitae tincidunt tellus metus a erat.
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer-entry footer-entry-first unselectable">
+					<div class="small-text"><b>Charlie Smith</b></div>					
+					<div class="footer-icon" onclick="window.open('https://www.facebook.com/', '_blank');">
+						<div class="fa fa-facebook"></div>
+					</div>
+					<div class="footer-icon" onclick="window.open('https://www.instagram.com/', '_blank');">
+						<div class="fa fa-instagram"></div>
+					</div>
+				</div>
+				<div class="footer-entry">
+					<div class="tiny-text"><b>PHONE</b></div>
+					<div class="small-text" style="margin-bottom: 5px;">(555) 555-5555</div>
+					<div class="tiny-text"><b>EMAIL</b></div>
+					<div class="small-text">charles@smith.net</div>
+				</div>
+				<div class="footer-entry footer-entry-last">
+					<div class="tiny-text">Site content © Charlie Smith.<br>Site design © <a href="http://ellisgreenmusic.com" target="_blank">Ellis Green</a>.<br>All rights reserved.</div>
+				</div>
+			</div>	
+		</div>
+		<!-- Contact -->
+		<div class="page">
+			<div class="page-content page-content-padded">
+				<div class="page-title page-title-wide">Contact</div>
+				<div class="page-entry">
+					<div class="page-text">
+						<b class="small-text">PHONE</b>
+						<div class="contact-text"><div class="fa fa-phone"></div>&nbsp;&nbsp;&nbsp;(555) 555-5555</div>
+						<b class="small-text">EMAIL</b>
+						<div class="contact-text"><div class="fa fa-envelope"></div>&nbsp;&nbsp;&nbsp;charles@smith.net</div>
+					</div>
+				</div>
+				<div class="page-entry">
+					<div class="page-text">
+						<b class="small-text">FACEBOOK</b>
+						<div class="contact-text"><div class="fa fa-facebook"></div>&nbsp;&nbsp;&nbsp;facebook.com/18_choruzes</div>
+						<b class="small-text">ISN'TAGRAM</b>
+						<div class="contact-text"><div class="fa fa-instagram"></div>&nbsp;&nbsp;&nbsp;istagram.com/birdscooter</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer-entry footer-entry-first unselectable">
+					<div class="small-text"><b>Charlie Smith</b></div>					
+					<div class="footer-icon" onclick="window.open('https://www.facebook.com/', '_blank');">
+						<div class="fa fa-facebook"></div>
+					</div>
+					<div class="footer-icon" onclick="window.open('https://www.instagram.com/', '_blank');">
+						<div class="fa fa-instagram"></div>
+					</div>
+				</div>
+				<div class="footer-entry">
+					<div class="tiny-text"><b>PHONE</b></div>
+					<div class="small-text" style="margin-bottom: 5px;">(555) 555-5555</div>
+					<div class="tiny-text"><b>EMAIL</b></div>
+					<div class="small-text">charles@smith.net</div>
+				</div>
+				<div class="footer-entry footer-entry-last">
+					<div class="tiny-text">Site content © Charlie Smith.<br>Site design © <a href="http://ellisgreenmusic.com" target="_blank">Ellis Green</a>.<br>All rights reserved.</div>
+				</div>
+			</div>	
+		</div>
+		<script type="text/javascript" src="scripts/menu.js"></script>
+		<script type="text/javascript" src="scripts/flip.js"></script>
+		<script type="text/javascript" src="scripts/transition.js"></script>
+		<script type="text/javascript">
+			
+		</script>
+	</body>	
+</html>
