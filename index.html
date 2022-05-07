@@ -5,8 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Charlia Smith, jazz pianist">
 		<meta name="keywords" content="charles, charlie, smith, jazz, piano, pianist, phoenix, arizona, az">
-		<meta name="author" content="Charlia Smith">
-		<meta name="theme-color" content="#ff6600">
+		<meta name="author" content="Charlie Smith">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="style.css" />
@@ -28,7 +27,7 @@
 		<!-- Title -->
 		<title>Charlie Smith</title>
 	</head>
-	<body>
+	<body onload="load()">
 		<!-- Navbar-->
 		<div class="navbar unselectable">
 			<div class="navbar-button" onclick="openMenu();">≡</div>
@@ -52,43 +51,26 @@
 		<h1>Charlie Smith</h1>
 		<!-- Home -->
 		<div class="page home-page page-active">
-			<div class="panel left-panel"></div>
-			<div class="panel right-panel">
-				<div class="keyboard">
-					<div class="key key-white"></div>
-					<div class="key key-white"></div>
-					<div class="key key-white"></div>
-					<div class="key key-white"></div>
-					<div class="key key-white"></div>
-					<div class="key key-white"></div>
-					<div class="key key-white"></div>
-					<div class="key key-black" style="margin-left: 7.14%"></div>
-					<div class="key key-black" style="margin-left: 21.43%"></div>
-					<div class="key key-black" style="margin-left: 50%"></div>
-					<div class="key key-black" style="margin-left: 64.29%"></div>
-					<div class="key key-black" style="margin-left: 78.57%"></div>
-				</div>
-				<div class="panel-padding">
-					<div class="name unselectable">
-						<div class="name-line">
-							<div class="letter" onclick="flip(this)">C</div>
-							<div class="letter" onclick="flip(this)">h</div>
-							<div class="letter" onclick="flip(this)">a</div>
-							<div class="letter" onclick="flip(this)">r</div>
-							<div class="letter" onclick="flip(this)">l</div>
-							<div class="letter" onclick="flip(this)">i</div>
-							<div class="letter" onclick="flip(this)">e</div>
-						</div>
-						<div class="name-line name-second-line">
-							<div class="letter" onclick="flip(this)">S</div>
-							<div class="letter" onclick="flip(this)">m</div>
-							<div class="letter" onclick="flip(this)">i</div>
-							<div class="letter" onclick="flip(this)">t</div>
-							<div class="letter" onclick="flip(this)">h</div>
-						</div>
+			<div id="name-container">
+				<div class="name unselectable">
+					<div class="name-line">
+						<div class="letter" onclick="flip(this)">C</div>
+						<div class="letter" onclick="flip(this)">h</div>
+						<div class="letter" onclick="flip(this)">a</div>
+						<div class="letter" onclick="flip(this)">r</div>
+						<div class="letter" onclick="flip(this)">l</div>
+						<div class="letter" onclick="flip(this)">i</div>
+						<div class="letter" onclick="flip(this)">e</div>
 					</div>
-					<div id="name-subtitle">Jazz Pianist • Phoenix, AZ</div>
+					<div class="name-line name-second-line">
+						<div class="letter" onclick="flip(this)">S</div>
+						<div class="letter" onclick="flip(this)">m</div>
+						<div class="letter" onclick="flip(this)">i</div>
+						<div class="letter" onclick="flip(this)">t</div>
+						<div class="letter" onclick="flip(this)">h</div>
+					</div>
 				</div>
+				<div id="name-subtitle">Jazz Pianist • Phoenix, AZ</div>
 			</div>
 		</div>
 		<!-- About -->
@@ -174,11 +156,20 @@
 				</div>
 			</div>	
 		</div>
+		<div id="loading-screen">
+			<div id="loading-icon"></div>
+		</div>
 		<script type="text/javascript" src="scripts/menu.js"></script>
 		<script type="text/javascript" src="scripts/flip.js"></script>
 		<script type="text/javascript" src="scripts/transition.js"></script>
 		<script type="text/javascript">
-			
+			function load() {
+				let loadingScreen = document.getElementById("loading-screen");
+				loadingScreen.style.opacity = "0";
+				setTimeout(() => {
+					loadingScreen.style.display = "none";
+				}, 400); 
+			}
 		</script>
 	</body>	
 </html>
