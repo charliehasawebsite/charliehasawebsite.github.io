@@ -30,8 +30,6 @@ function animateName() {
 		}, 700);
 	}, 300);
 }
-eraseName();
-animateName();
 
 function flip(letter) {
 	if(letter.style.transform === "rotateY(180deg)") {
