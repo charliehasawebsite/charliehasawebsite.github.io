@@ -262,6 +262,7 @@ h1 {
 	        transform-style: preserve-3d;
 }
 #name-subtitle {
+	text-align: center;
 	opacity: 0;
 	-webkit-transition: opacity .5s;
 	-o-transition: opacity .5s;
@@ -269,7 +270,6 @@ h1 {
 	/* Mobile styling */
 	font-size: 16pt;
 	padding-top: 10px;
-	padding-left: 15px;
 }
 /* Text */
 .page-title {
@@ -448,7 +448,6 @@ h1 {
 	#name-subtitle {
 		font-size: 20pt;
 		padding-top: 12px;
-		padding-left: 25px;
 	}
 	.title {
 		font-size: 50pt;
