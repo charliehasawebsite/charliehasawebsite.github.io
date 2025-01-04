@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 body {
 	font-family: 'Familjen Grotesk', sans-serif;
 	margin: 0;
@@ -193,10 +200,11 @@ h1 {
 .home-page {
 	-webkit-box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, .1);
 	        box-shadow: 5pxpx 5px 5px 0 rgba(0, 0, 0, .1);
-	background-image: url("images/home.jpg");
-	background-position: left top;
 	background-size: cover;
 	width: 100%;
+	
+	background-image: url("images/home-tall.jpg");
+	background-position: center;
 }
 .page-content {
 	-ms-flex-item-align: start;
@@ -214,6 +222,9 @@ h1 {
 	padding-top: 60px;
 }
 .page-entry {
+	width: 100%;
+}
+.page-entry-full {
 	width: 100%;
 }
 .page-image {
@@ -297,11 +308,19 @@ h1 {
 }
 .tiny-text {
 	font-size: 8pt;
+	line-height: 125%;
 }
 .contact-text {
 	font-size: 16pt;
 	padding-top: 5px;
 	padding-bottom: 15px;
+}
+.contact-text a {
+	color: black;
+}
+.contact-icon {
+	width: 33px;
+	text-align: center;
 }
 /* Footer */
 .footer {
@@ -410,6 +429,10 @@ h1 {
 	.navbar-logo {
 		display: block;
 	}
+	.home-page {
+		background-image: url("images/home-wide.jpg");
+		background-position: right center;
+	}
 	.page {
 		min-height: calc(100vh - 100px);
 	}
@@ -426,8 +449,13 @@ h1 {
 		width: 350px;
 		max-width: 100%;
 	}
+	.page-entry-full {
+		width: 780px;
+		max-width: 100%;
+	}
 	.page-image {
 		max-width: 100%;
+		padding-bottom: 30px;
 	}
 	.page-title {
 		padding-top: 0;
